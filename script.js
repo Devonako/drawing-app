@@ -38,6 +38,6 @@ function getCoordinates(e) {
   if (e.type.startsWith('touch')) {
     return [e.touches[0].clientX - canvas.offsetLeft, e.touches[0].clientY - canvas.offsetTop];
   } else {
-    return [e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop];
+    return [e.offsetX, e.offsetY]; // Use offsetX and offsetY for mouse events
   }
 }
